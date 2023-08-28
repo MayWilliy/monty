@@ -13,7 +13,7 @@ void f_printch(stack_t **head, unsigned int county)
 	h = *head;
 	if (!h)
 	{
-		fprintf(stderr, "L%d: can't print pchar, the stack is empty\n", county);
+		fprintf(stderr, "L%d: can't print pch, empty stk \n", county);
 		fclose(bus.file);
 		free(bus.cont);
 		free_stack(*head);
@@ -21,7 +21,7 @@ void f_printch(stack_t **head, unsigned int county)
 	}
 	if (h->n > 127 || h->n < 0)
 	{
-		fprintf(stderr, "L%d: can't print pchar, the is value out of range\n", county);
+		fprintf(stderr, "L%d: can't print pch, no range\n", county);
 		fclose(bus.file);
 		free(bus.cont);
 		free_stack(*head);
